@@ -130,14 +130,14 @@ textarea:focus {
 }
 
 nav,
-.scroll .header {
+.header {
   opacity: 1;
   visibility: visible;
   transition: all 600ms 800ms;
 }
 
 .modal--open nav,
-.modal--open .scroll .modal--open .header {
+.modal--open .header {
   opacity: 0;
   visibility: hidden;
   transition: all 400ms;
@@ -158,15 +158,6 @@ nav,
 
 .dark-theme #personal-logo {
   filter: none;
-}
-
-.dark-theme .scroll__icon {
-  border-color: white;
-}
-
-.dark-theme .scroll__icon:after,
-.dark-theme .link__hover-effect--black:after {
-  background-color: white;
 }
 
 .dark-theme .mail__btn {
@@ -232,42 +223,6 @@ LANDING PAGE
   z-index: 100;
 }
 
-.scroll {
-  position: absolute;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.scroll__icon {
-  width: 20px;
-  height: 30px;
-  border: 2px solid #242424;
-  border-radius: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.scroll__icon:after {
-  content: "";
-  width: 4px;
-  height: 6px;
-  background-color: #242424;
-  border-radius: 2px;
-  animation: scroll 1000ms infinite alternate-reverse;
-}
-
-@keyframes scroll {
-  0% {
-    transform: translateY(3px);
-  }
-
-  100% {
-    transform: translateY(-3px);
-  }
-}
-
 /* 
 
 NAVIGATION 
@@ -331,7 +286,11 @@ MODAL
   display: flex;
   z-index: 60;
   visibility: hidden;
-  transition: visibility 1s, z-index 1s, box-shadow 0.5s, ease;
+  transition:
+    visibility 1s,
+    z-index 1s,
+    box-shadow 0.5s,
+    ease;
   z-index: -1;
 }
 
@@ -549,7 +508,9 @@ PROJECTS
   left: 90px;
   transform: translateY(100%);
   opacity: 0;
-  transition: opacity 500ms ease, transform 500ms ease;
+  transition:
+    opacity 500ms ease,
+    transform 500ms ease;
   color: white;
   max-width: 550px;
 }
@@ -572,10 +533,16 @@ PROJECTS
   margin-top: 8px;
 }
 
-.project__description--link {
+.project__link,
+.project__link:visited {
   color: white;
   font-size: 20px;
   margin-right: 16px;
+}
+
+.project__wrapper .project__description .project__link i,
+.project__wrapper .project__description .project__link:visited i {
+  color: white !important;
 }
 
 .project__description--para {
@@ -622,25 +589,7 @@ footer {
 
 SHAPES
 
-shapes one the first row
-height = 15vh
-
-shapes one the second row
-height = 50vh
-
-shapes one the first row
-height = 80vh
-
-shapes on the first column
-width = 5vw
-
-shapes on the second column
-width = 50vw 
-
-shapes on the first column
-width = 80vw
-
-  */
+*/
 
 .shape {
   position: fixed;
@@ -654,31 +603,38 @@ width = 80vw
 .shape--1 {
   left: 50vw;
 }
+
 .shape--2 {
   left: 80vw;
 }
+
 .shape--3 {
   top: calc(50vh + 100px);
   left: 5vw;
 }
+
 .shape--4 {
   top: calc(50vh + 100px);
   left: 50vw;
 }
+
 .shape--5 {
-  top: calc(50vh + 100px); 
+  top: calc(50vh + 100px);
   left: 80vw;
 }
+
 .shape--6 {
-  top: calc(80vh + 100px); 
+  top: calc(80vh + 100px);
   left: 5vw;
 }
+
 .shape--7 {
-  top: calc(80vh + 100px); 
+  top: calc(80vh + 100px);
   left: 50vw;
 }
+
 .shape--8 {
-  top: calc(80vh + 100px); 
+  top: calc(80vh + 100px);
   left: 80vw;
 }
 
@@ -691,6 +647,21 @@ width = 80vw
 
   .header__para {
     font-size: 20px;
+  }
+
+  .header {
+    padding-top: 100px;
+  }
+
+  .nav {
+    height: 80px;
+    padding: 0px;
+  }
+
+  #personal-logo {
+    width: 70px;
+    height: 70px;
+    border-width: 3px;
   }
 
   .modal {
@@ -708,33 +679,194 @@ width = 80vw
   }
 }
 
-/* Small phones */
+@media (max-width: 640px) {
+  .header {
+    padding-top: 90px;
+  }
 
-@media (max-width: 480px) {
+  nav {
+    height: 70px;
+    padding: 0 16px;
+  }
+
+  #personal-logo {
+    width: 60px;
+    height: 60px;
+    border-width: 2px;
+    margin-top: 0;
+  }
+
+  .project__description {
+    left: 0;
+    padding: 0 20px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .project__description--title {
+    font-size: 20px;
+  }
+
+  .project__description--sub-title {
+    font-size: 11px;
+    margin-bottom: 6px;
+  }
+
+  .project__description--para {
+    font-size: 12px;
+    line-height: 1.4;
+    margin: 6px 0;
+  }
+
+  .modal__half {
+    padding: 24px;
+  }
+
+  .modal__title {
+    font-size: 22px;
+  }
+
+  .modal__para {
+    font-size: 14px;
+  }
+
+  .modal__language {
+    width: 33.33%;
+    padding: 12px;
+  }
+
+  .modal__language i {
+    font-size: 32px;
+  }
+
   .title {
-    font-size: 52px;
+    font-size: 48px;
   }
 
   .header__para {
     font-size: 18px;
+    line-height: 1.6;
+  }
 
+  .nav__link {
+    margin: 0 8px;
   }
-  .nav__link:first-child {
-    display: none;
+
+  .nav__link--anchor {
+    font-size: 14px;
   }
+}
+
+/* Small phones */
+
+@media (max-width: 480px) {
+  #personal-logo {
+    width: 50px;
+    height: 50px;
+    border-width: 2px;
+  }
+
+  nav {
+    height: 60px;
+    padding: 0 12px;
+  }
+
+  .nav__link--anchor {
+    font-size: 12px;
+  }
+
+  .nav__link {
+    margin: 0 6px;
+  }
+
+  .title {
+    font-size: 52px;
+  }
+
+  .header {
+    padding-top: 80px;
+  }
+
+  .header__para {
+    font-size: 18px;
+  }
+
   .project__description--para {
     display: none;
   }
+
+  /* Default state — overlay hidden, image visible */
   .project__description {
     left: 0;
-    padding: 0;
+    padding: 0 16px;
     width: 100%;
     text-align: center;
+    opacity: 0;
+    transform: translateY(-50%);
   }
+
+  .project__wrapper--bg {
+    opacity: 0;
+  }
+
+  .project__img {
+    transform: none;
+    filter: none;
+  }
+
+  /* Tapped state — overlay shows on click/tap */
+  .project__wrapper.tapped .project__description {
+    opacity: 1;
+  }
+
+  .project__wrapper.tapped .project__wrapper--bg {
+    opacity: 0.7;
+  }
+
+  .project__wrapper.tapped .project__img {
+    transform: scale(1.07);
+    filter: blur(5px);
+  }
+
   .project__description--sub-title {
     margin-bottom: 8px;
   }
+
   .modal__half {
-    padding: 40px;
+    padding: 24px;
+  }
+
+  .modal__para {
+    font-size: 12px;
+  }
+
+  .form__item {
+    margin-bottom: 16px;
+  }
+
+  .form__submit {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  input,
+  textarea {
+    height: 36px;
+    font-size: 16px;
+  }
+
+  textarea {
+    height: 80px;
+  }
+
+  .footer__social--list {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .shape {
+    opacity: 0.3;
+    width: 30px;
   }
 }

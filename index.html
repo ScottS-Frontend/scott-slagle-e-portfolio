@@ -70,27 +70,22 @@
           Here's a bit more <b class="blue click" onclick="toggleModal()">about me.</b>
         </p>
         <div class="social__list">
-  <!--  Replace with my own LinkedIn page -->
-  <a href="#" class="social__link click">
+  <a href="https://www.linkedin.com/in/scottpslagle" target="_blank" onclick="showComingSoon(event, 'LinkedIn')" class="social__link click">
     <i class="fa-brands fa-linkedin-in"></i> 
   </a>
   <a href="https://github.com/ScottS-Frontend" target="_blank" class="social__link click">
     <i class="fa-brands fa-github"></i>  
   </a>
-  <!--  Replace with my own resume -->
-  <a href="./assets/David Bragg Resume.pdf" target="_blank" class="social__link click">
+  <a href="#" onclick="showResumeMessage(event, 'Resume')" class="social__link click">
     <i class="fa-solid fa-file-pdf"></i> 
   </a>
 </div>
       </header>
       <a href="#">
-      <button class="mail__btn click" onclick="toggleModal()"">
+      <button class="mail__btn click" onclick="toggleModal()">
         <i class="fa-solid fa-envelope"></i>
       </button>
-      </a>      
-      <a href="#projects" class="scroll">
-        <div class="scroll__icon click"></div>
-      </a>
+      </a>     
       <div class="modal">
         <div class="modal__half modal__about">
           <h3 class="modal__title modal__title--about">Here's a bit <b class="blue" >about me.</b></h3>
@@ -98,7 +93,7 @@
           <p class="modal__para">
             I'm a <b class="blue">frontend web developer</b> with a strong passion for developing websites with great <b class="blue">user experiences.</b>
             <br><br>
-            I'm currently working through the Frontend Simplified Boot camp to solidify my knowledge and gain hands-on experience in building web applications. I'm excited to connect with <b class="blue">like-minded professionals</b> and explore opportunities in the tech industry.
+            I'm a graduate of Frontend Simplified Institute Boot camp. It was instrumental in solidifying my knowledge and gaining hands-on experience in building web applications. I'm excited to connect with <b class="blue">like-minded professionals</b> and explore opportunities in the tech industry.
           </p>
 <div class="modal__languages">
   <figure class="modal__language">
@@ -171,23 +166,23 @@
         <ul class="project__list">
           <li class="project">
             <div class="project__wrapper">
-              <img src="./assets/blinker mockup.png" class="project__img">
+              <img src="./assets/skinstricai_screenshot.png" class="project__img">
               <div class="project__wrapper--bg"></div>
               <div class="project__description">
                 <h3 class="h3 project__description--title">
-                  Car Sales Project
+                  Skinstric A.I. Project
                 </h3>
                 <h4 class="project__description--sub-title">
-                  Html, CSS, Javascript, Vue, Vuex
+                  Html, CSS, Javascript, React
                 </h4>
                 <p class="project__description--para">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  Skinstric A.I. skincare platform built with React, featuring custom diamond-shaped UI components, live camera and file upload feature, and a multi-step user flow from intro to personalized results. Implemented full responsiveness across 1024px, 768px, and 640px breakpoints, adapting complex geometric layouts from grid to stacked arrangements. Built with React, JavaScript, and CSS/SCSS, deployed on Vercel. Developed as an advanced internship project focused on precision UI replication and component-based architecture.
                 </p>
                 <div class="project__description--links">
-                  <a href="https://github.com/ScottS-Frontend" class="project__link">
+                  <a href="https://github.com/ScottS-Frontend/skinstricai.git" class="project__link" target="_blank">
                     <i class="fa-brands fa-github"></i>
                   </a>
-                  <a href="#" class="project__link">
+                  <a href="https://skinstricai-scottslagle.vercel.app/" class="project__link" target="_blank">
                     <i class="fa-solid fa-link"></i>
                   </a>
                 </div>
@@ -196,23 +191,23 @@
           </li>
           <li class="project">
             <div class="project__wrapper">
-              <img src="./assets/google mockup.png" class="project__img">
+              <img src="./assets/ultraverseNFTworld_screenshot.png" class="project__img">
               <div class="project__wrapper--bg"></div>
               <div class="project__description">
                 <h3 class="h3 project__description--title">
-                  Google In-Store
+                  Ultraverse NFT World
                 </h3>
                 <h4 class="project__description--sub-title">
-                  Html, CSS, Javascript, Vue, Vuex
+                  Html, CSS, Javascript, React
                 </h4>
                 <p class="project__description--para">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  A fully responsive NFT marketplace landing page built with React, featuring dynamic sections for hot collections, new items, top sellers, and category browsing with a modern purple-gradient design system. Integrated with a live API to fetch and display real-time NFT data, including collection metadata, item pricing, and seller rankings. Built with React, JavaScript, and CSS, deployed on Vercel as part of an advanced frontend internship focused on API integration and e-commerce UI patterns.
                 </p>
                 <div class="project__description--links">
-                  <a href="#" class="project__link">
+                  <a href="https://github.com/ScottS-Frontend/scott-internship.git" class="project__link" target="_blank">
                     <i class="fa-brands fa-github"></i>
                   </a>
-                  <a href="#" class="project__link">
+                  <a href="https://nftmarketplace-scott.vercel.app/" class="project__link" target="_blank">
                     <i class="fa-solid fa-link"></i>
                   </a>
                 </div>
@@ -221,23 +216,48 @@
           </li>
           <li class="project">
             <div class="project__wrapper">
-              <img src="./assets/Frontend Simplified.png" class="project__img">
+              <img src="./assets/summarist_screenshot.png" class="project__img">
               <div class="project__wrapper--bg"></div>
               <div class="project__description">
                 <h3 class="h3 project__description--title">
-                  Frontend Simplified
+                  Summarist
                 </h3>
                 <h4 class="project__description--sub-title">
-                  Html, CSS, Javascript, Vue, Vuex
+                  Html, CSS, Javascript, Firebase Auth, Stripe
                 </h4>
                 <p class="project__description--para">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  A fully responsive book summary platform landing page for Summarist, featuring Firebase authentication for user login, Stripe payment integration for subscription handling, and a conversion-driven design with value propositions and social proof. Built with React, JavaScript, CSS, Firebase Auth, and Stripe, deployed on Vercel. An FES Institute bootcamp project focused on full-stack features, authentication flows, and payment processing.
                 </p>
                 <div class="project__description--links">
-                  <a href="#" class="project__link">
+                  <a href="https://github.com/ScottS-Frontend/scott-summarist.git" class="project__link" target="_blank">
                     <i class="fa-brands fa-github"></i>
                   </a>
-                  <a href="#" class="project__link">
+                  <a href="https://scott-summarist.vercel.app/" class="project__link" target="_blank">
+                    <i class="fa-solid fa-link"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </li>
+          <li class="project">
+            <div class="project__wrapper">
+              <img src="./assets/netflixclone-screenshot.png" class="project__img">
+              <div class="project__wrapper--bg"></div>
+              <div class="project__description">
+                <h3 class="h3 project__description--title">
+                  Netflix Clone Project
+                </h3>
+                <h4 class="project__description--sub-title">
+                  Html, CSS, Javascript, Next.JS, Firebase Auth, TypeScript
+                </h4>
+                <p class="project__description--para">
+                  A Netflix clone built with Next.js featuring Firebase Authentication for user sign-up and sign-in, TMDB API integration for dynamic movie and TV show data, and a responsive UI replicating the Netflix browsing experience. Includes protected routes, dynamic content rows, and hover-triggered video previews. Built with Next.js, React, TypeScript, Firebase Auth, Firestore, and TMDB API, deployed on Vercel. An FES Institute bootcamp project focused on API integration, authentication, and complex UI state management.
+                </p>
+                <div class="project__description--links">
+                  <a href="https://github.com/ScottS-Frontend/Netflix-Clone.git" class="project__link" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                  </a>
+                  <a href="https://netflix-clone-scott.vercel.app/" class="project__link" target="_blank">
                     <i class="fa-solid fa-link"></i>
                   </a>
                 </div>
@@ -260,7 +280,7 @@
         link__hover-effect--white
         ">GitHub
         </a>
-        <a href="#" target="_blank" class="
+        <a href="https://www.linkedin.com/in/scottpslagle" target="_blank" class="
         footer__social--link
         link__hover-effect
         link__hover-effect--white
@@ -272,12 +292,11 @@
         link__hover-effect--white
         ">Contact
         </a>
-        <a href="./assets/David Bragg Resume.pdf" target="_blank" class="
-        footer__social--link
-        link__hover-effect
-        link__hover-effect--white
-        ">Resume
-        </a>
+        <a href="#" onclick="showResumeMessage(event)" class="
+  footer__social--link
+  link__hover-effect
+  link__hover-effect--white
+">Resume</a>
       </div>
       <div class="footer__copyright">
         Copyright 2026 © Scott Slagle.

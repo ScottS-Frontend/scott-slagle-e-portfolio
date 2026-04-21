@@ -33,7 +33,7 @@ function contact(event) {
       "service_meetweg",
       "template_jygyeph",
       event.target,
-      "RJthz35oIiV7VG5Ey"
+      "RJthz35oIiV7VG5Ey",
     )
     .then(() => {
       loading.classList.remove("modal__overlay--visible");
@@ -42,7 +42,7 @@ function contact(event) {
     .catch(() => {
       loading.classList.remove("modal__overlay--visible");
       alert(
-        "The email service is temporarily unavailable. Please contact me directly at scottslaglebusiness@gmail.com"
+        "The email service is temporarily unavailable. Please contact me directly at scottslaglebusiness@gmail.com",
       );
     });
 }
@@ -54,4 +54,24 @@ function toggleModal() {
   }
   isModalOpen = true;
   document.body.classList += " modal--open";
+}
+
+// Toggle project overlay on tap/click for mobile
+document.querySelectorAll(".project__wrapper").forEach((wrapper) => {
+  wrapper.addEventListener("click", () => {
+    // Close other open projects first (optional — remove if you want multiple open)
+    document.querySelectorAll(".project__wrapper").forEach((other) => {
+      if (other !== wrapper) {
+        other.classList.remove("tapped");
+      }
+    });
+
+    // Toggle current project
+    wrapper.classList.toggle("tapped");
+  });
+});
+
+function showResumeMessage(event) {
+  event.preventDefault();
+  alert("Resume coming soon! Check back later.");
 }
