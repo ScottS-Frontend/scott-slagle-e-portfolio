@@ -379,6 +379,21 @@ MODAL
   margin-bottom: 20px;
 }
 
+.form__error {
+  color: #ff6b6b;
+  font-size: 12px;
+  margin-top: 4px;
+  display: none;
+}
+
+.form__error--visible {
+  display: block;
+}
+
+.input--error {
+  border-color: #ff6b6b !important;
+}
+
 .form__submit {
   background-color: #4169e1;
   border: 2px solid #4169e1;

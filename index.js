@@ -24,25 +24,62 @@ function toggleContrast() {
 }
 
 function contact(event) {
-  event.preventDefault(event);
+  event.preventDefault();
+
+  const form = event.target;
+  const name = form.user_name.value.trim();
+  const email = form.user_email.value.trim();
+  const message = form.message.value.trim();
+
+  // Validation checks
+  if (!name) {
+    alert("Please enter your name.");
+    form.user_name.focus();
+    return;
+  }
+
+  if (!email) {
+    alert("Please enter your email.");
+    form.user_email.focus();
+    return;
+  }
+
+  // Simple email format check
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  if (!emailPattern.test(email)) {
+    alert("Please enter a valid email address.");
+    form.user_email.focus();
+    return;
+  }
+
+  if (!message) {
+    alert("Please enter a message.");
+    form.message.focus();
+    return;
+  }
+
+  // All good — send the email
   const loading = document.querySelector(".modal__overlay--loading");
   const success = document.querySelector(".modal__overlay--success");
-  loading.classList += " modal__overlay--visible";
+  
+  loading.classList.add("modal__overlay--visible");
+  
   emailjs
     .sendForm(
       "service_meetweg",
       "template_jygyeph",
-      event.target,
-      "RJthz35oIiV7VG5Ey",
+      form,
+      "RJthz35oIiV7VG5Ey"
     )
     .then(() => {
       loading.classList.remove("modal__overlay--visible");
-      success.classList += " modal__overlay--visible";
+      success.classList.add("modal__overlay--visible");
+      form.reset(); // Clear the form after success
     })
     .catch(() => {
       loading.classList.remove("modal__overlay--visible");
       alert(
-        "The email service is temporarily unavailable. Please contact me directly at scottslaglebusiness@gmail.com",
+        "The email service is temporarily unavailable. Please contact me directly at scottslaglebusiness@gmail.com"
       );
     });
 }
