@@ -30,7 +30,7 @@ button {
 }
 
 section {
-  background-color: rgb(245, 245, 245);
+  background-color:  #faf8f5;
   transition: all 300ms ease;
 }
 
@@ -485,6 +485,10 @@ PROJECTS
   margin-bottom: 115px;
 }
 
+.project:last-child {
+  margin-bottom: 40px;
+}
+
 .project__img {
   width: 100%;
   transition: all 600ms ease;
@@ -564,11 +568,48 @@ PROJECTS
   margin: 16px 0;
 }
 
-/* 
+/* CERTIFICATE */
 
-FOOTER
+#certificate {
+  padding: 20px 0 40px 0;
+}
 
-*/
+.certificate__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.certificate__img {
+  max-width: 600px;
+  width: 90%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.certificate__link {
+  display: inline-block;  /* makes the link wrap tightly around the image */
+  transition: transform 0.3s ease;
+}
+
+.certificate__link:hover {
+  transform: scale(1.02);  /* subtle zoom on hover */
+}
+
+.certificate__caption {
+  text-align: center;
+  margin-top: 16px;
+  font-size: 14px;
+  color: #555;
+}
+
+.certificate__caption a {
+  text-decoration: underline;
+}
+
+/* FOOTER */
 
 footer {
   position: relative;
@@ -600,11 +641,7 @@ footer {
   color: white;
 }
 
-/*
-
-SHAPES
-
-*/
+/* SHAPES */
 
 .shape {
   position: fixed;
@@ -769,6 +806,11 @@ SHAPES
 
   .nav__link--anchor {
     font-size: 14px;
+  }
+
+  .certificate__img {
+    max-width: 100%;
+    width: 100%;
   }
 }
 
