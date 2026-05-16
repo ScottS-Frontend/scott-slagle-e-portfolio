@@ -148,7 +148,8 @@ nav,
 .dark-theme .section___sub-title,
 .dark-theme .nav__link--anchor,
 .dark-theme .fa-solid fa-circle-half-stroke,
-.dark-theme .header__para {
+.dark-theme .header__para,
+.dark-theme .header__sub-title {
   color: white;
 }
 
