@@ -320,6 +320,18 @@ MODAL
   transform: translateX(-110%);
 }
 
+.skill-pill {
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 20px;
+  background-color: #4169e1;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 4px;
+  border: none;
+}
+
 .modal__languages {
   display: flex;
   flex-wrap: wrap;
