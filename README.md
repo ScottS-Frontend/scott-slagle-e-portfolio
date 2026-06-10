@@ -1,7 +1,7 @@
 # Scott Slagle — Frontend Developer Portfolio
 
 <p align="center">
-  <img src="./assets/SS%20initials.png" alt="Scott Slagle Logo" width="120">
+  <img src="./assets/scottslagle_logo.png" alt="Scott Slagle Logo" width="120">
 </p>
 
 <p align="center">
